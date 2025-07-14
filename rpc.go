@@ -52,10 +52,10 @@ func (e Error) Error() string {
 	return e.Message
 }
 
-// checkError is used to check whether an error is a libvirtError, and if it is,
+// CheckError is used to check whether an error is a libvirtError, and if it is,
 // whether its error code matches the one passed in. It will return false if
 // these conditions are not met.
-func checkError(err error, expectedError ErrorNumber) bool {
+func CheckError(err error, expectedError ErrorNumber) bool {
 	for err != nil {
 		e, ok := err.(Error)
 		if ok {
@@ -68,7 +68,7 @@ func checkError(err error, expectedError ErrorNumber) bool {
 
 // IsNotFound detects libvirt's ERR_NO_DOMAIN.
 func IsNotFound(err error) bool {
-	return checkError(err, ErrNoDomain)
+	return CheckError(err, ErrNoDomain)
 }
 
 // callback sends RPC responses to respective callers.
