@@ -37,8 +37,6 @@ const (
 	QEMUProcConnectDomainMonitorEventDeregister = 5
 	// QEMUProcDomainMonitorEvent is libvirt's QEMU_PROC_DOMAIN_MONITOR_EVENT
 	QEMUProcDomainMonitorEvent = 6
-	// QEMUProcDomainMonitorCommandWithFiles is libvirt's QEMU_PROC_DOMAIN_MONITOR_COMMAND_WITH_FILES
-	QEMUProcDomainMonitorCommandWithFiles = 7
 
 
 	// From consts:
